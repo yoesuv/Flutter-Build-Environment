@@ -1,13 +1,15 @@
 import 'package:equatable/equatable.dart';
 
-abstract class HomeState extends Equatable {
-  const HomeState();
-}
-
-class HomeStateInit extends HomeState {
+class HomeState extends Equatable {
   final String baseUrl;
 
-  const HomeStateInit(this.baseUrl);
+  const HomeState({this.baseUrl = ''});
+
+  HomeState copyWith({String? baseUrl}) {
+    return HomeState(
+      baseUrl: baseUrl ?? this.baseUrl,
+    );
+  }
 
   @override
   List<Object> get props => [baseUrl];

@@ -36,15 +36,15 @@ class FlavorConfig {
   });
 
   FlavorConfig.production(): this._(
-    baseUrl: 'https://production.google.com'
+    baseUrl: 'https://production.flutter.com'
   );
 
   FlavorConfig.staging(): this._(
-      baseUrl: 'https://staging.google.com'
+      baseUrl: 'https://staging.flutter.com'
   );
 
   FlavorConfig.development(): this._(
-      baseUrl: 'https://development.google.com'
+      baseUrl: 'https://development.flutter.com'
   );
 
   Map toJson() => {
