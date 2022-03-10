@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 enum Flavor {
   development,
   staging,
@@ -46,5 +48,14 @@ class FlavorConfig {
   FlavorConfig.development(): this._(
       baseUrl: 'https://development.google.com'
   );
+
+  Map toJson() => {
+    'baseUrl': baseUrl,
+  };
+
+  @override
+  String toString() {
+    return toJson().toString();
+  }
 
 }
