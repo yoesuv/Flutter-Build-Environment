@@ -1,5 +1,7 @@
+import 'package:build_environment/src/core/home_bloc.dart';
 import 'package:build_environment/src/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,7 +13,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal
       ),
-      home: const Home(),
+      home: BlocProvider(
+        create: (context) => HomeBloc(),
+        child: const Home(),
+      ),
     );
   }
 }
