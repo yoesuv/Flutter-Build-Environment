@@ -31,6 +31,13 @@ class Home extends StatelessWidget {
               Text(state.baseUrl, style: const TextStyle(
                 fontSize: 18,
               )),
+              const Text('Package/Bundle Name :', style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              )),
+              Text(state.packageName, style: const TextStyle(
+                fontSize: 18,
+              )),
             ],
           );
         },
