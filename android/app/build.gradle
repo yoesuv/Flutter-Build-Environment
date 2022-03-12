@@ -57,6 +57,21 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "default"
+    productFlavors {
+        development {
+            resValue "string", "app_name", "Flavor DEV"
+            applicationId "com.yoesuv.build_environment.dev"
+        }
+        staging {
+            resValue "string", "app_name", "Flavor STAGING"
+            applicationId "com.yoesuv.build_environment.staging"
+        }
+        production {
+            resValue "string", "app_name", "Flavor"
+        }
+    }
 }
 
 flutter {
