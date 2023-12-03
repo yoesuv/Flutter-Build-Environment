@@ -10,10 +10,10 @@ flutter run --flavor production
 
 #### Dependencies ####
 ```
-Flutter 3.10.6 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision f468f3366c (10 days ago) • 2023-07-12 15:19:05 -0700
-Engine • revision cdbeda788a
-Tools • Dart 3.0.6 • DevTools 2.23.1
+Flutter 3.16.0 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision db7ef5bf9f (2 weeks ago) • 2023-11-15 11:25:44 -0800
+Engine • revision 74d16627b9
+Tools • Dart 3.2.0 • DevTools 2.28.2
 ```
 
 #### Screenshot Android ####
@@ -27,8 +27,8 @@ Tools • Dart 3.0.6 • DevTools 2.23.1
 | ![Installed](https://i.imgur.com/GJD6CVb.png) | ![Scheme Dev](https://i.imgur.com/3L8rk84.png) | ![Scheme Staging](https://i.imgur.com/GdeLxLt.png) | ![Scheme Production](https://i.imgur.com/9OrrM1f.png) |
 
 #### List Library ####
-- [Bloc Library](https://github.com/felangel/bloc)
 - [Equatable](https://pub.dev/packages/equatable)
+- [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 - [Package Info Plus](https://pub.dev/packages/package_info_plus)
 
 #### References ####
