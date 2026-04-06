@@ -10,10 +10,10 @@ flutter run --flavor production
 
 #### Dependencies ####
 ```
-Flutter 3.27.1 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 17025dd882 (5 weeks ago) • 2024-12-17 03:23:09 +0900
-Engine • revision cb4b5fff73
-Tools • Dart 3.6.0 • DevTools 2.40.2
+Flutter 3.41.6 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision db50e20168 (11 days ago) • 2026-03-25 16:21:00 -0700
+Engine • hash 5cdd32777948fa7a648fac915f8da7120ac7e97a (revision 425cfb54d0) (11 days ago) • 2026-03-25 20:14:42.000Z
+Tools • Dart 3.11.4 • DevTools 2.54.2
 ```
 
 #### Screenshot Android ####
