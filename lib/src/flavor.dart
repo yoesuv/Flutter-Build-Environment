@@ -1,8 +1,4 @@
-enum Flavor {
-  development,
-  staging,
-  production,
-}
+enum Flavor { development, staging, production }
 
 extension FlavorExtension on Flavor {
   String get value {
@@ -18,42 +14,30 @@ extension FlavorExtension on Flavor {
 }
 
 class FlavorConfig {
-
   final String baseUrl;
+  final String packageName;
 
-  factory FlavorConfig(Flavor flavor) {
-    if (flavor == Flavor.production) {
-      return FlavorConfig.production();
-    } else if (flavor == Flavor.staging) {
-      return FlavorConfig.staging();
-    } else {
-      return FlavorConfig.development();
-    }
-  }
+  const FlavorConfig._({required this.baseUrl, required this.packageName});
 
-  const FlavorConfig._({
-    required this.baseUrl,
-  });
+  FlavorConfig.production({required String packageName})
+    : this._(
+        baseUrl: 'https://production.flutter.com',
+        packageName: packageName,
+      );
 
-  FlavorConfig.production(): this._(
-    baseUrl: 'https://production.flutter.com'
-  );
+  FlavorConfig.staging({required String packageName})
+    : this._(baseUrl: 'https://staging.flutter.com', packageName: packageName);
 
-  FlavorConfig.staging(): this._(
-      baseUrl: 'https://staging.flutter.com'
-  );
+  FlavorConfig.development({required String packageName})
+    : this._(
+        baseUrl: 'https://development.flutter.com',
+        packageName: packageName,
+      );
 
-  FlavorConfig.development(): this._(
-      baseUrl: 'https://development.flutter.com'
-  );
-
-  Map toJson() => {
-    'baseUrl': baseUrl,
-  };
+  Map toJson() => {'baseUrl': baseUrl};
 
   @override
   String toString() {
     return toJson().toString();
   }
-
 }

@@ -7,14 +7,14 @@ Future<FlavorConfig> flavorConfig() async {
     PackageInfo info = await PackageInfo.fromPlatform();
     final packageName = info.packageName;
     if (packageName.endsWith('dev')) {
-      return FlavorConfig.development();
+      return FlavorConfig.development(packageName: packageName);
     } else if (packageName.endsWith('staging')) {
-      return FlavorConfig.staging();
+      return FlavorConfig.staging(packageName: packageName);
     } else {
-      return FlavorConfig.production();
+      return FlavorConfig.production(packageName: packageName);
     }
   } catch (error) {
     debugPrint('Utils # flavorConfig error $error', wrapWidth: 1024);
   }
-  return FlavorConfig.production();
+  return FlavorConfig.production(packageName: 'unknown');
 }
