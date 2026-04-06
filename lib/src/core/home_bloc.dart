@@ -9,12 +9,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<HomeEventInit>(_loadEnvironment);
   }
 
-  void _loadEnvironment(HomeEventInit event, Emitter<HomeState> emit) async{
+  void _loadEnvironment(HomeEventInit event, Emitter<HomeState> emit) async {
     final flavor = await flavorConfig();
     final packageInfo = await PackageInfo.fromPlatform();
-    emit(state.copyWith(
-      baseUrl: flavor.baseUrl,
-      packageName: packageInfo.packageName
-    ));
+    emit(
+      state.copyWith(
+        baseUrl: flavor.baseUrl,
+        packageName: packageInfo.packageName,
+      ),
+    );
   }
 }
